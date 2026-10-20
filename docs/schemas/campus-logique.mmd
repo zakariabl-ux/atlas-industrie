@@ -1,0 +1,41 @@
+﻿graph LR
+    subgraph A["Building A - head office and IT"]
+        CCA["CC-A"]
+        FWA["FW-A"]
+        A1["ACC-A-01"]
+        A2["ACC-A-02"]
+        A3["ACC-A-03"]
+        A4["ACC-A-04"]
+        A5["ACC-A-05"]
+        A6["ACC-A-06"]
+
+        CCA --- A1
+        CCA --- A2
+        CCA --- A3
+        CCA --- A4
+        CCA --- A5
+        CCA --- A6
+        CCA --- FWA
+    end
+
+    subgraph B["Building B - production"]
+        CCB["CC-B"]
+        FWB["FW-B"]
+        B1["ACC-B-01"]
+        B2["ACC-B-02"]
+        B3["ACC-B-03"]
+        B4["ACC-B-04"]
+
+        CCB --- FWB
+        FWB --- B1
+        FWB --- B2
+        FWB --- B3
+        FWB --- B4
+    end
+
+    CCA ---|"Fibre route 1"| CCB
+    CCA ---|"Fibre route 2"| CCB
+
+    %% Adapted from Chapter 1, page 13, and the lab inventory.
+    %% Assumptions: access switches connect locally; FW-B filters OT traffic.
+    %% Firewall HA and detailed security-zone connections remain to be specified.
