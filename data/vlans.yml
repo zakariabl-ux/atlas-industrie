@@ -14,3 +14,5 @@ vlans:
   - {id: 51, name: ot-supervision, zone: ot, ipv4: 10.42.65.0/24, ipv6: 'fd49:4a21:d2ec:51::/64'}
   - {id: 60, name: dmz, zone: dmz, ipv4: 10.42.80.0/24, ipv6: 'fd49:4a21:d2ec:60::/64'}
   - {id: 99, name: inutilise, zone: aucune, routed: false}
+
+
