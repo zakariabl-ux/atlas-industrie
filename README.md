@@ -5,3 +5,5 @@ Design of the Atlas Industrie network, the fictitious company of the
 the addressing plan is authoritative in `data/vlans.yml`.
 
 Local check: `python scripts/check_vlans.py` from the repository root.
+IPv6 ULA prefix: `fd49:4a21:d2ec::/48`.
+
